@@ -7,6 +7,7 @@ import BookList from "./components/BookList";
 import fantasy from "./data/fantasy.json";
 
 function App() {
+  // console.log(fantasy);
   return (
     <div className="App">
       <NavBar />
