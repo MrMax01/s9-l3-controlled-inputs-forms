@@ -14,12 +14,13 @@ class SingleBook extends Component {
   handleChange = (propertyName, propertyValue) => {
     this.setState({ review: { ...this.state.review, [propertyName]: propertyValue } });
   };
-  render(prop) {
+  render() {
+    const book = this.props.book;
     return (
       <Card>
-        <Card.Img variant="top" src={prop.book.img} height={300} className="object-fit-cover" />
+        <Card.Img variant="top" src={book.img} height={300} className="object-fit-cover" />
         <Card.Body>
-          <Card.Title className="noCapo">{prop.book.title}</Card.Title>
+          <Card.Title className="noCapo">{book.title}</Card.Title>
           {/* <Form>
             <Form.Group className="mb-3">
               <Form.Label>Nome:</Form.Label>
